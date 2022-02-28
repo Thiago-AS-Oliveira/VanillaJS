@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 13vh 20vw;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 3em;
+    color: #3a3c40;
+}
+
+
+/* janela de review */
+.janelaReview {
+    width: 50vw;
+    height: 60vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px #393b3f28;
+    border-radius: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* imagem do usuário */
+.imgUsuario {
+    position: relative;
+}
+
+
+.imgUsuario img {
+    height: 20vh;
+    width: 11vw;
+    border-radius: 100%;
+    box-shadow: 5px -2px 0 2px #53d1ec;
+}
+
+/* texto*/
+.janelaReview .review {
+    width: 90%;
+    height: 32%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review .autor {
+    font-size: 1.8em;
+    color: #3a3c40;
+}
+
+.review .cargo {
+    color: #53d1ec;
+    font-size: 1.2em;
+}
+
+.review .texto {
+    color: #3a3c40;
+    font-size: 1.3em;
+    word-spacing: -1px;
+}
+
+/* botoes */
+ 
+.botoes {
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoes button {
+    font-size: 1.7em;
+    color: #53d1ec;
+    background-color: rgba(0, 0, 0, 0 );
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.review-aleatoria {
+    font-size: 1.2em;
+    color: #53d1ec;
+    background-color: rgba(0, 0, 0, 0 );
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.review-aleatoria:hover {
+    color: #f2f2f2;
+    background-color: #53d1ec;
+}
