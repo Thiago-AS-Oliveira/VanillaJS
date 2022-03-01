@@ -37,24 +37,26 @@ const reviews = [
         "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
     },
   ]
+  const btnAnterior = document.querySelector(".anterior")
+  const btnProximo = document.querySelector(".proximo")
+  const btnAleatorio = document.querySelector(".review-aleatoria")
+  
+  let indice = Math.floor(Math.random() * reviews.length)
 
-
-function addReviews(reviews) {
+function addReviews(review) {
   let img = document.querySelector(".usuarioImg")
   let autor = document.querySelector(".autor")
   let cargo = document.querySelector(".cargo")
   let texto = document.querySelector(".texto")
 
-  img.setAttribute("src", reviews.img)
-  autor.innerText = reviews.name
-  cargo.innerText = reviews.job
-  texto.innerText = reviews.text
+  img.src = review.img
+  autor.textContent = review.name
+  cargo.textContent = review.job
+  texto.textContent = review.text
 }
 
-let indice = Math.floor(Math.random() * reviews.length)
-addReviews(reviews[indice])
+window.addEventListener("DOMContentLoaded", addReviews(reviews[indice]))
 
-const btnAnterior = document.querySelector(".anterior")
 btnAnterior.addEventListener("click", () => {
   indice--
   addReviews(reviews[indice])
@@ -64,7 +66,6 @@ btnAnterior.addEventListener("click", () => {
   }
 })
 
-const btnProximo = document.querySelector(".proximo")
 btnProximo.addEventListener("click", () => {
   indice++
   addReviews(reviews[indice])
@@ -74,7 +75,6 @@ btnProximo.addEventListener("click", () => {
   }
 })
 
-const btnAleatorio = document.querySelector(".review-aleatoria")
 btnAleatorio.addEventListener("click", () => {
     indice = Math.floor(Math.random() * reviews.length)
     addReviews(reviews[indice])
