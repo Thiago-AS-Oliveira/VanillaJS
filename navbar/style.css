@@ -1,0 +1,156 @@
+:root {
+    --cor1: #0e1318;
+    --cor2: #212b36;
+    --cor3: #f2f2f2;
+    --cor4: #f2e852;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor2);
+}
+
+/* nav container */
+header {
+    background-color: var(--cor1);
+    width: 100%;
+    height: 9vh;
+    padding: 2%;
+}
+
+/* "logo" */
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor2);
+    text-shadow: 0 0 4px var(--cor3);
+}
+
+h2 span {
+    font-weight: 900;
+    color: var(--cor4);
+}
+
+/* aplicando flex-box nas uls com os links e na barra de navegação */
+header, .links, .linksPrincipais, .redesSociais {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* estilização geral */
+
+/* nav com as uls */
+.links {
+    width: 60%;
+    justify-content: space-between;
+}
+
+/* ul com os links principais*/
+.linksPrincipais {
+    width: 40%;
+    font-size: 1.3rem;
+    list-style: none;
+}
+
+/* ul com os links das redes sociais */
+.redesSociais {
+    width: 18%;
+    font-size: 1.1em;
+    list-style: none;
+}
+
+/* links */
+.linksPrincipais a, .redesSociais a {
+    text-decoration: none;
+    color: var(--cor3);
+    transition: 700ms;
+}
+
+.linksPrincipais a:hover {
+    color: var(--cor4);
+    text-shadow: 0 0 3px var(--cor3);
+    transition: 700ms;
+}
+
+
+.redesSociais a {
+    color: var(--cor2);
+    text-shadow: 0 0 4px var(--cor4);
+    transition: 700ms;
+}
+
+.redesSociais a :hover{
+    color: var(--cor4);
+    text-shadow: 0 0 3px var(--cor4);
+    transition: 700ms;
+}
+
+/* botão do menu principal */
+.botaoMenu {
+    font-size: 2rem;
+    color: var(--cor2);
+    text-shadow: 0 0 4px var(--cor4);
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    transition: 500ms;
+    
+    display: none;
+}
+
+.botaoMenu:hover {
+    color: #f2e852;
+    transition: 500ms;
+    transform: rotate(90deg);
+}
+
+/* responsividade */
+@media screen and (max-width: 800px) {
+    /* classe para aumentat a navbar e exibir os links */
+    .exibirLinks {
+        height: 35vh;
+    }
+
+    header {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        transition: 700ms;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .links {
+        order: 1; /* indo pro fim da fila */
+        width: 100%;
+        height: 23vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 2%;
+    }
+
+    .linksPrincipais {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 80%;
+    }
+
+    .redesSociais {
+        width: 20%;
+    }
+
+
+    .botaoMenu {
+        display: block;
+    } 
+
+}
