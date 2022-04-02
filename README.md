@@ -1,6 +1,8 @@
 # VanillaJS
-Projetos desenvolvidos em html, css e js puro
+Projetos desenvolvidos somente com html, css e js.
 
-Antes de começar o aprendizado de qualquer framework, comecei a desenvolver projetos somente com as três tecnologias, tanto para fixar 
-quanto para por em prova meus conhecimentos, alguns projetos são sugestões pesquisadas na internet, onde o foco principal foi desenvolver 
-sozinho e depois comparar os códigos com os dos projetos prontos.
+A programação web parte de JavaScript, HTML e CSS, independente dos frameworks e bibliotecas utilizadas no front-end e da linguagem, bibliotecas
+e frameworks utilizados no back-end, o que será interpretado no browser, na sua essência será uma aplicação desenvolvida nessas três tecnologias,
+estudar, praticar e por a prova os esses conhecimentos é extremamente necessário para quem desenvolve para web. React, por exemplo, mistura elementos html e javascript para criação da estrutura das aplicações.
+
+Este repositório foi criado para por em prática tudo que tenho estudado sobre essas tecnologias.
