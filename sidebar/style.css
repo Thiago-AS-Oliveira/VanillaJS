@@ -1,0 +1,142 @@
+/* Cores */
+:root {
+    --cor1: #0e1318;
+    --cor2: #212b36;
+    --cor3: #f2f2f2;
+    --cor4: #f2e852;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor2);
+}
+
+@keyframes brilho {
+    50%{
+        text-shadow: 0 0 4px #f2e852;
+    }
+}
+
+.botaoMenu{
+    position: absolute;
+    margin: 40px 50px;
+    font-size: 2.5rem;
+    background-color: #0000;
+    color: var(--cor1);
+    border: none;
+    cursor: pointer;
+    animation: brilho 4s infinite;
+}
+
+.ocultarBotao {
+    display: none;
+}
+
+/* side bar */
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    background-color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    transition: 400ms;
+    transform: translate(-100%);
+}
+
+.mostrarSidebar {
+    transform: translateX(0);
+}
+
+.headerMenu {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Logo */
+.headerMenu h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor2);
+    text-shadow: 0 0 3px var(--cor3);
+    letter-spacing: 4px;
+}
+
+.headerMenu h2 span {
+    font-weight: 900;
+    color: var(--cor4);
+}
+
+.headerMenu .botaoFechar {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--cor2);
+    text-shadow: 0 0 3px var(--cor4);
+}
+
+/* container com todos os links */
+
+.links {
+    height: 100%;
+    flex: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.links li {
+    list-style: none;
+}
+
+/* links do menu principal */
+.menu {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--cor3);
+    transition: 800ms;
+}
+
+.menu a:hover {
+    color: var(--cor4);
+    text-shadow: 0 0 2px var(--cor3);
+    font-size: 1.7em;
+}
+
+/* links das redes sociais */
+.redesSociais {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redesSociais a {
+    color: var(--cor2);
+    text-shadow: 0 0 4px var(--cor4);
+    font-size: 1.3rem;
+    margin: 0 10px;
+    transition: 700ms;
+}
+
+.redesSociais a:hover {
+    color: var(--cor4);
+}
